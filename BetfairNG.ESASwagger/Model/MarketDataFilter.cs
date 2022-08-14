@@ -26,6 +26,7 @@ namespace Betfair.ESASwagger.Model
         }
 
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum FieldsEnum
         {
             [EnumMember(Value = "EX_BEST_OFFERS_DISP")]
@@ -60,12 +61,14 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets Fields
         /// </summary>
         [DataMember(Name = "fields", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("fields")]
         public List<FieldsEnum?> Fields { get; set; }
 
         /// <summary>
         ///     Gets or Sets LadderLevels
         /// </summary>
         [DataMember(Name = "ladderLevels", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("ladderLevels")]
         public int? LadderLevels { get; set; }
 
         /// <summary>

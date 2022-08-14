@@ -47,6 +47,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Token value delta (received in MarketChangeMessage) that should be passed to resume a subscription</value>
         [DataMember(Name = "clk", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("clk")]
         public string Clk { get; set; }
 
         /// <summary>
@@ -54,6 +55,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Conflate Milliseconds - the conflation rate (looped back on initial image after validation: bounds are 0 to 120000)</value>
         [DataMember(Name = "conflateMs", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("conflateMs")]
         public long? ConflateMs { get; set; }
 
         /// <summary>
@@ -61,6 +63,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Heartbeat Milliseconds - the heartbeat rate (looped back on initial image after validation: bounds are 500 to 30000)</value>
         [DataMember(Name = "heartbeatMs", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("heartbeatMs")]
         public long? HeartbeatMs { get; set; }
 
         /// <summary>
@@ -68,6 +71,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Client generated unique id to link request with response (like json rpc)</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
         public new int? Id { get; set; }
 
         /// <summary>
@@ -75,6 +79,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Token value (received in initial MarketChangeMessage) that should be passed to resume a subscription</value>
         [DataMember(Name = "initialClk", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("initialClk")]
         public string InitialClk { get; set; }
 
         /// <summary>
@@ -82,12 +87,14 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>The operation type</value>
         [DataMember(Name = "op", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("op")]
         public new string Op { get; set; }
 
         /// <summary>
         ///     Gets or Sets OrderFilter
         /// </summary>
         [DataMember(Name = "orderFilter", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("orderFilter")]
         public OrderFilter OrderFilter { get; set; }
 
         /// <summary>
@@ -95,6 +102,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Segmentation Enabled - allow the server to send large sets of data in segments, instead of a single block</value>
         [DataMember(Name = "segmentationEnabled", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("segmentationEnabled")]
         public bool? SegmentationEnabled { get; set; }
 
         /// <summary>

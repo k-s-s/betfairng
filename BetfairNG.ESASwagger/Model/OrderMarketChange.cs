@@ -34,18 +34,21 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets AccountId
         /// </summary>
         [DataMember(Name = "accountId", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("accountId")]
         public long? AccountId { get; set; }
 
         /// <summary>
         ///     Gets or Sets Closed
         /// </summary>
         [DataMember(Name = "closed", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("closed")]
         public bool? Closed { get; set; }
 
         /// <summary>
         ///     Gets or Sets FullImage
         /// </summary>
         [DataMember(Name = "fullImage", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("fullImage")]
         public bool? FullImage { get; set; }
 
         /// <summary>
@@ -53,6 +56,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Market Id - the id of the market the order is on</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
         public string Id { get; set; }
 
         /// <summary>
@@ -60,6 +64,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Order Changes - a list of changes to orders on a selection</value>
         [DataMember(Name = "orc", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("orc")]
         public List<OrderRunnerChange> Orc { get; set; }
 
         /// <summary>

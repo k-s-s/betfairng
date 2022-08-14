@@ -81,6 +81,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Order Type - the type of the order (L = LIMIT, MOC = MARKET_ON_CLOSE, LOC = LIMIT_ON_CLOSE)</value>
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum OtEnum
         {
             [EnumMember(Value = "L")]
@@ -98,6 +99,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Persistence Type - whether the order will persist at in play or not (L = LAPSE, P = PERSIST, MOC = Market On Close)</value>
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum PtEnum
         {
             [EnumMember(Value = "L")]
@@ -115,6 +117,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Side - the side of the order</value>
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum SideEnum
         {
             [EnumMember(Value = "B")]
@@ -129,6 +132,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Status - the status of the order (E = EXECUTABLE, EC = EXECUTION_COMPLETE)</value>
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum StatusEnum
         {
             [EnumMember(Value = "E")]
@@ -143,6 +147,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Average Price Matched - the average price the order was matched at (null if the order is not matched</value>
         [DataMember(Name = "avp", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("avp")]
         public double? Avp { get; set; }
 
         /// <summary>
@@ -150,6 +155,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>BSP Liability - the BSP liability of the order (null if the order is not a BSP order)</value>
         [DataMember(Name = "bsp", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("bsp")]
         public double? Bsp { get; set; }
 
         /// <summary>
@@ -157,6 +163,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Cancelled Date - the date the order was cancelled (null if the order is not cancelled)</value>
         [DataMember(Name = "cd", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("cd")]
         public long? Cd { get; set; }
 
         /// <summary>
@@ -164,6 +171,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Bet Id - the id of the order</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
         public string Id { get; set; }
 
         /// <summary>
@@ -171,6 +179,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Matched Date - the date the order was matched (null if the order is not matched)</value>
         [DataMember(Name = "md", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("md")]
         public long? Md { get; set; }
 
         /// <summary>
@@ -178,6 +187,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Order Type - the type of the order (L = LIMIT, MOC = MARKET_ON_CLOSE, LOC = LIMIT_ON_CLOSE)</value>
         [DataMember(Name = "ot", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("ot")]
         public OtEnum? Ot { get; set; }
 
         /// <summary>
@@ -185,6 +195,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Price - the original placed price of the order</value>
         [DataMember(Name = "p", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("p")]
         public double? P { get; set; }
 
         /// <summary>
@@ -192,6 +203,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Placed Date - the date the order was placed</value>
         [DataMember(Name = "pd", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("pd")]
         public long? Pd { get; set; }
 
         /// <summary>
@@ -199,6 +211,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Persistence Type - whether the order will persist at in play or not (L = LAPSE, P = PERSIST, MOC = Market On Close)</value>
         [DataMember(Name = "pt", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("pt")]
         public PtEnum? Pt { get; set; }
 
         /// <summary>
@@ -206,6 +219,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Regulator Auth Code - the auth code returned by the regulator</value>
         [DataMember(Name = "rac", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("rac")]
         public string Rac { get; set; }
 
         /// <summary>
@@ -213,6 +227,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Regulator Code - the regulator of the order</value>
         [DataMember(Name = "rc", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("rc")]
         public string Rc { get; set; }
 
         /// <summary>
@@ -220,6 +235,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Size - the original placed size of the order</value>
         [DataMember(Name = "s", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("s")]
         public double? S { get; set; }
 
         /// <summary>
@@ -227,6 +243,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Size Cancelled - the amount of the order that has been cancelled</value>
         [DataMember(Name = "sc", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("sc")]
         public double? Sc { get; set; }
 
         /// <summary>
@@ -234,6 +251,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Side - the side of the order</value>
         [DataMember(Name = "side", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("side")]
         public SideEnum? Side { get; set; }
 
         /// <summary>
@@ -241,6 +259,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Size Lapsed - the amount of the order that has been lapsed</value>
         [DataMember(Name = "sl", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("sl")]
         public double? Sl { get; set; }
 
         /// <summary>
@@ -248,6 +267,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Size Matched - the amount of the order that has been matched</value>
         [DataMember(Name = "sm", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("sm")]
         public double? Sm { get; set; }
 
         /// <summary>
@@ -255,6 +275,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Size Remaining - the amount of the order that is remaining unmatched</value>
         [DataMember(Name = "sr", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("sr")]
         public double? Sr { get; set; }
 
         /// <summary>
@@ -262,6 +283,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Status - the status of the order (E = EXECUTABLE, EC = EXECUTION_COMPLETE)</value>
         [DataMember(Name = "status", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("status")]
         public StatusEnum? Status { get; set; }
 
         /// <summary>
@@ -269,6 +291,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Size Voided - the amount of the order that has been voided</value>
         [DataMember(Name = "sv", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("sv")]
         public double? Sv { get; set; }
 
         /// <summary>

@@ -38,6 +38,7 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets OpTypes
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum OpTypesEnum
         {
             [EnumMember(Value = "heartbeat")]
@@ -57,30 +58,35 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets Authentication
         /// </summary>
         [DataMember(Name = "authentication", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("authentication")]
         public AuthenticationMessage Authentication { get; set; }
 
         /// <summary>
         ///     Gets or Sets Heartbeat
         /// </summary>
         [DataMember(Name = "heartbeat", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("heartbeat")]
         public HeartbeatMessage Heartbeat { get; set; }
 
         /// <summary>
         ///     Gets or Sets MarketSubscription
         /// </summary>
         [DataMember(Name = "marketSubscription", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("marketSubscription")]
         public MarketSubscriptionMessage MarketSubscription { get; set; }
 
         /// <summary>
         ///     Gets or Sets OpTypes
         /// </summary>
         [DataMember(Name = "opTypes", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("opTypes")]
         public OpTypesEnum? OpTypes { get; set; }
 
         /// <summary>
         ///     Gets or Sets OrderSubscriptionMessage
         /// </summary>
         [DataMember(Name = "orderSubscriptionMessage", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("orderSubscriptionMessage")]
         public OrderSubscriptionMessage OrderSubscriptionMessage { get; set; }
 
         /// <summary>

@@ -45,6 +45,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>The type of error in case of a failure</value>
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum ErrorCodeEnum
         {
             [EnumMember(Value = "NO_APP_KEY")]
@@ -92,6 +93,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>The status of the last request</value>
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum StatusCodeEnum
         {
             [EnumMember(Value = "SUCCESS")]
@@ -106,6 +108,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Is the connection now closed</value>
         [DataMember(Name = "connectionClosed", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("connectionClosed")]
         public bool? ConnectionClosed { get; set; }
 
         /// <summary>
@@ -113,6 +116,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>The connection id</value>
         [DataMember(Name = "connectionId", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("connectionId")]
         public string ConnectionId { get; set; }
 
         /// <summary>
@@ -120,6 +124,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>The type of error in case of a failure</value>
         [DataMember(Name = "errorCode", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("errorCode")]
         public ErrorCodeEnum? ErrorCode { get; set; }
 
         /// <summary>
@@ -127,6 +132,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Additional message in case of a failure</value>
         [DataMember(Name = "errorMessage", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("errorMessage")]
         public string ErrorMessage { get; set; }
 
         /// <summary>
@@ -134,6 +140,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Client generated unique id to link request with response (like json rpc)</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
         public new int? Id { get; set; }
 
         /// <summary>
@@ -141,6 +148,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>The operation type</value>
         [DataMember(Name = "op", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("op")]
         public new string Op { get; set; }
 
         /// <summary>
@@ -148,6 +156,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>The status of the last request</value>
         [DataMember(Name = "statusCode", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("statusCode")]
         public StatusCodeEnum? StatusCode { get; set; }
 
         /// <summary>

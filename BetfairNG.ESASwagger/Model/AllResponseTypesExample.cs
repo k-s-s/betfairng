@@ -38,6 +38,7 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets OpTypes
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum OpTypesEnum
         {
             [EnumMember(Value = "connection")]
@@ -57,30 +58,35 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets Connection
         /// </summary>
         [DataMember(Name = "connection", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("connection")]
         public ConnectionMessage Connection { get; set; }
 
         /// <summary>
         ///     Gets or Sets MarketChangeMessage
         /// </summary>
         [DataMember(Name = "marketChangeMessage", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("marketChangeMessage")]
         public MarketChangeMessage MarketChangeMessage { get; set; }
 
         /// <summary>
         ///     Gets or Sets OpTypes
         /// </summary>
         [DataMember(Name = "opTypes", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("opTypes")]
         public OpTypesEnum? OpTypes { get; set; }
 
         /// <summary>
         ///     Gets or Sets OrderChangeMessage
         /// </summary>
         [DataMember(Name = "orderChangeMessage", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("orderChangeMessage")]
         public OrderChangeMessage OrderChangeMessage { get; set; }
 
         /// <summary>
         ///     Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("status")]
         public StatusMessage Status { get; set; }
 
         /// <summary>

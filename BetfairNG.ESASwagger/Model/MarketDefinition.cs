@@ -112,6 +112,7 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets BettingType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum BettingTypeEnum
         {
             [EnumMember(Value = "ODDS")]
@@ -134,6 +135,7 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets Status
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum StatusEnum
         {
             [EnumMember(Value = "INACTIVE")]
@@ -153,60 +155,70 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets BetDelay
         /// </summary>
         [DataMember(Name = "betDelay", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("betDelay")]
         public int? BetDelay { get; set; }
 
         /// <summary>
         ///     Gets or Sets BettingType
         /// </summary>
         [DataMember(Name = "bettingType", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("bettingType")]
         public BettingTypeEnum? BettingType { get; set; }
 
         /// <summary>
         ///     Gets or Sets BspMarket
         /// </summary>
         [DataMember(Name = "bspMarket", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("bspMarket")]
         public bool? BspMarket { get; set; }
 
         /// <summary>
         ///     Gets or Sets BspReconciled
         /// </summary>
         [DataMember(Name = "bspReconciled", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("bspReconciled")]
         public bool? BspReconciled { get; set; }
 
         /// <summary>
         ///     Gets or Sets Complete
         /// </summary>
         [DataMember(Name = "complete", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("complete")]
         public bool? Complete { get; set; }
 
         /// <summary>
         ///     Gets or Sets CountryCode
         /// </summary>
         [DataMember(Name = "countryCode", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("countryCode")]
         public string CountryCode { get; set; }
 
         /// <summary>
         ///     Gets or Sets CrossMatching
         /// </summary>
         [DataMember(Name = "crossMatching", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("crossMatching")]
         public bool? CrossMatching { get; set; }
 
         /// <summary>
         ///     Gets or Sets DiscountAllowed
         /// </summary>
         [DataMember(Name = "discountAllowed", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("discountAllowed")]
         public bool? DiscountAllowed { get; set; }
 
         /// <summary>
         ///     Gets or Sets EachWayDivisor
         /// </summary>
         [DataMember(Name = "eachWayDivisor", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("eachWayDivisor")]
         public double? EachWayDivisor { get; set; }
 
         /// <summary>
         ///     Gets or Sets EventId
         /// </summary>
         [DataMember(Name = "eventId", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("eventId")]
         public string EventId { get; set; }
 
         /// <summary>
@@ -214,54 +226,63 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>The Event Type the market is contained within.</value>
         [DataMember(Name = "eventTypeId", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("eventTypeId")]
         public string EventTypeId { get; set; }
 
         /// <summary>
         ///     Gets or Sets InPlay
         /// </summary>
         [DataMember(Name = "inPlay", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("inPlay")]
         public bool? InPlay { get; set; }
 
         /// <summary>
         ///     Gets or Sets MarketBaseRate
         /// </summary>
         [DataMember(Name = "marketBaseRate", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("marketBaseRate")]
         public double? MarketBaseRate { get; set; }
 
         /// <summary>
         ///     Gets or Sets MarketTime
         /// </summary>
         [DataMember(Name = "marketTime", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("marketTime")]
         public DateTime? MarketTime { get; set; }
 
         /// <summary>
         ///     Gets or Sets MarketType
         /// </summary>
         [DataMember(Name = "marketType", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("marketType")]
         public string MarketType { get; set; }
 
         /// <summary>
         ///     Gets or Sets NumberOfActiveRunners
         /// </summary>
         [DataMember(Name = "numberOfActiveRunners", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("numberOfActiveRunners")]
         public int? NumberOfActiveRunners { get; set; }
 
         /// <summary>
         ///     Gets or Sets NumberOfWinners
         /// </summary>
         [DataMember(Name = "numberOfWinners", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("numberOfWinners")]
         public int? NumberOfWinners { get; set; }
 
         /// <summary>
         ///     Gets or Sets OpenDate
         /// </summary>
         [DataMember(Name = "openDate", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("openDate")]
         public DateTime? OpenDate { get; set; }
 
         /// <summary>
         ///     Gets or Sets PersistenceEnabled
         /// </summary>
         [DataMember(Name = "persistenceEnabled", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("persistenceEnabled")]
         public bool? PersistenceEnabled { get; set; }
 
         /// <summary>
@@ -269,60 +290,70 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>The market regulators.</value>
         [DataMember(Name = "regulators", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("regulators")]
         public List<string> Regulators { get; set; }
 
         /// <summary>
         ///     Gets or Sets Runners
         /// </summary>
         [DataMember(Name = "runners", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("runners")]
         public List<RunnerDefinition> Runners { get; set; }
 
         /// <summary>
         ///     Gets or Sets RunnersVoidable
         /// </summary>
         [DataMember(Name = "runnersVoidable", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("runnersVoidable")]
         public bool? RunnersVoidable { get; set; }
 
         /// <summary>
         ///     Gets or Sets SettledTime
         /// </summary>
         [DataMember(Name = "settledTime", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("settledTime")]
         public DateTime? SettledTime { get; set; }
 
         /// <summary>
         ///     Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("status")]
         public StatusEnum? Status { get; set; }
 
         /// <summary>
         ///     Gets or Sets SuspendTime
         /// </summary>
         [DataMember(Name = "suspendTime", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("suspendTime")]
         public DateTime? SuspendTime { get; set; }
 
         /// <summary>
         ///     Gets or Sets Timezone
         /// </summary>
         [DataMember(Name = "timezone", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("timezone")]
         public string Timezone { get; set; }
 
         /// <summary>
         ///     Gets or Sets TurnInPlayEnabled
         /// </summary>
         [DataMember(Name = "turnInPlayEnabled", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("turnInPlayEnabled")]
         public bool? TurnInPlayEnabled { get; set; }
 
         /// <summary>
         ///     Gets or Sets Venue
         /// </summary>
         [DataMember(Name = "venue", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("venue")]
         public string Venue { get; set; }
 
         /// <summary>
         ///     Gets or Sets Version
         /// </summary>
         [DataMember(Name = "version", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("version")]
         public long? Version { get; set; }
 
         /// <summary>

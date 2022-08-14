@@ -70,6 +70,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Available To Back - PriceVol tuple delta of price changes (0 vol is remove)</value>
         [DataMember(Name = "atb", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("atb")]
         public List<List<double?>> Atb { get; set; }
 
         /// <summary>
@@ -77,6 +78,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Available To Lay - PriceVol tuple delta of price changes (0 vol is remove)</value>
         [DataMember(Name = "atl", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("atl")]
         public List<List<double?>> Atl { get; set; }
 
         /// <summary>
@@ -84,6 +86,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Best Available To Back - LevelPriceVol triple delta of price changes, keyed by level (0 vol is remove)</value>
         [DataMember(Name = "batb", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("batb")]
         public List<List<double?>> Batb { get; set; }
 
         /// <summary>
@@ -91,6 +94,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Best Available To Lay - LevelPriceVol triple delta of price changes, keyed by level (0 vol is remove)</value>
         [DataMember(Name = "batl", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("batl")]
         public List<List<double?>> Batl { get; set; }
 
         /// <summary>
@@ -98,6 +102,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Best Display Available To Back (includes virtual prices)- LevelPriceVol triple delta of price changes, keyed by level (0 vol is remove)</value>
         [DataMember(Name = "bdatb", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("bdatb")]
         public List<List<double?>> Bdatb { get; set; }
 
         /// <summary>
@@ -105,6 +110,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Best Display Available To Lay (includes virtual prices)- LevelPriceVol triple delta of price changes, keyed by level (0 vol is remove)</value>
         [DataMember(Name = "bdatl", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("bdatl")]
         public List<List<double?>> Bdatl { get; set; }
 
         /// <summary>
@@ -112,6 +118,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Handicap - the handicap of the runner (selection) (null if not applicable)</value>
         [DataMember(Name = "hc", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("hc")]
         public double? Hc { get; set; }
 
         /// <summary>
@@ -119,6 +126,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Selection Id - the id of the runner (selection)</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
         public long? Id { get; set; }
 
         /// <summary>
@@ -126,6 +134,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Last Traded Price - The last traded price (or null if un-changed)</value>
         [DataMember(Name = "ltp", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("ltp")]
         public double? Ltp { get; set; }
 
         /// <summary>
@@ -133,6 +142,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Starting Price Back - PriceVol tuple delta of price changes (0 vol is remove)</value>
         [DataMember(Name = "spb", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("spb")]
         public List<List<double?>> Spb { get; set; }
 
         /// <summary>
@@ -140,6 +150,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Starting Price Far - The far starting price (or null if un-changed)</value>
         [DataMember(Name = "spf", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("spf")]
         public double? Spf { get; set; }
 
         /// <summary>
@@ -147,6 +158,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Starting Price Lay - PriceVol tuple delta of price changes (0 vol is remove)</value>
         [DataMember(Name = "spl", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("spl")]
         public List<List<double?>> Spl { get; set; }
 
         /// <summary>
@@ -154,6 +166,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Starting Price Near - The far starting price (or null if un-changed)</value>
         [DataMember(Name = "spn", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("spn")]
         public double? Spn { get; set; }
 
         /// <summary>
@@ -161,6 +174,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Traded - PriceVol tuple delta of price changes (0 vol is remove)</value>
         [DataMember(Name = "trd", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("trd")]
         public List<List<double?>> Trd { get; set; }
 
         /// <summary>
@@ -168,6 +182,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>The total amount matched. This value is truncated at 2dp.</value>
         [DataMember(Name = "tv", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("tv")]
         public double? Tv { get; set; }
 
         /// <summary>

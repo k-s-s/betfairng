@@ -44,6 +44,7 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets Status
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum StatusEnum
         {
             [EnumMember(Value = "ACTIVE")]
@@ -72,12 +73,14 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets AdjustmentFactor
         /// </summary>
         [DataMember(Name = "adjustmentFactor", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("adjustmentFactor")]
         public double? AdjustmentFactor { get; set; }
 
         /// <summary>
         ///     Gets or Sets Bsp
         /// </summary>
         [DataMember(Name = "bsp", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("bsp")]
         public double? Bsp { get; set; }
 
         /// <summary>
@@ -85,6 +88,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Handicap - the handicap of the runner (selection) (null if not applicable)</value>
         [DataMember(Name = "hc", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("hc")]
         public double? Hc { get; set; }
 
         /// <summary>
@@ -92,24 +96,28 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Selection Id - the id of the runner (selection)</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
         public long? Id { get; set; }
 
         /// <summary>
         ///     Gets or Sets RemovalDate
         /// </summary>
         [DataMember(Name = "removalDate", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("removalDate")]
         public DateTime? RemovalDate { get; set; }
 
         /// <summary>
         ///     Gets or Sets SortPriority
         /// </summary>
         [DataMember(Name = "sortPriority", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("sortPriority")]
         public int? SortPriority { get; set; }
 
         /// <summary>
         ///     Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("status")]
         public StatusEnum? Status { get; set; }
 
         /// <summary>

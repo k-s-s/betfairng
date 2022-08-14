@@ -59,6 +59,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Change Type - set to indicate the type of change - if null this is a delta)</value>
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum CtEnum
         {
             [EnumMember(Value = "SUB_IMAGE")]
@@ -76,6 +77,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Segment Type - if the change is split into multiple segments, this denotes the beginning and end of a change, and segments in between. Will be null if data is not segmented</value>
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum SegmentTypeEnum
         {
             [EnumMember(Value = "SEG_START")]
@@ -93,6 +95,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Token value (non-null) should be stored and passed in a MarketSubscriptionMessage to resume subscription (in case of disconnect)</value>
         [DataMember(Name = "clk", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("clk")]
         public string Clk { get; set; }
 
         /// <summary>
@@ -100,6 +103,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Conflate Milliseconds - the conflation rate (may differ from that requested if subscription is delayed)</value>
         [DataMember(Name = "conflateMs", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("conflateMs")]
         public long? ConflateMs { get; set; }
 
         /// <summary>
@@ -107,6 +111,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Change Type - set to indicate the type of change - if null this is a delta)</value>
         [DataMember(Name = "ct", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("ct")]
         public CtEnum? Ct { get; set; }
 
         /// <summary>
@@ -114,6 +119,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Heartbeat Milliseconds - the heartbeat rate (may differ from requested: bounds are 500 to 30000)</value>
         [DataMember(Name = "heartbeatMs", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("heartbeatMs")]
         public long? HeartbeatMs { get; set; }
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Client generated unique id to link request with response (like json rpc)</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
         public new int? Id { get; set; }
 
         /// <summary>
@@ -128,6 +135,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Token value (non-null) should be stored and passed in a MarketSubscriptionMessage to resume subscription (in case of disconnect)</value>
         [DataMember(Name = "initialClk", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("initialClk")]
         public string InitialClk { get; set; }
 
         /// <summary>
@@ -135,6 +143,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>MarketChanges - the modifications to markets (will be null on a heartbeat</value>
         [DataMember(Name = "mc", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("mc")]
         public List<MarketChange> Mc { get; set; }
 
         /// <summary>
@@ -142,6 +151,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>The operation type</value>
         [DataMember(Name = "op", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("op")]
         public new string Op { get; set; }
 
         /// <summary>
@@ -149,6 +159,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Publish Time (in millis since epoch) that the changes were generated</value>
         [DataMember(Name = "pt", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("pt")]
         public long? Pt { get; set; }
 
         /// <summary>
@@ -156,6 +167,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Segment Type - if the change is split into multiple segments, this denotes the beginning and end of a change, and segments in between. Will be null if data is not segmented</value>
         [DataMember(Name = "segmentType", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("segmentType")]
         public SegmentTypeEnum? SegmentType { get; set; }
 
         /// <summary>

@@ -43,6 +43,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Conflated - have more than a single change been combined (or null if not conflated)</value>
         [DataMember(Name = "con", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("con")]
         public bool? Con { get; set; }
 
         /// <summary>
@@ -50,6 +51,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Market Id - the id of the market</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
         public string Id { get; set; }
 
         /// <summary>
@@ -57,6 +59,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Image - replace existing prices / data with the data supplied: it is not a delta (or null if delta)</value>
         [DataMember(Name = "img", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("img")]
         public bool? Img { get; set; }
 
         /// <summary>
@@ -64,6 +67,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Market Definition - the definition of the market (or null if un-changed)</value>
         [DataMember(Name = "marketDefinition", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("marketDefinition")]
         public MarketDefinition MarketDefinition { get; set; }
 
         /// <summary>
@@ -71,6 +75,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Runner Changes - a list of changes to runners (or null if un-changed)</value>
         [DataMember(Name = "rc", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("rc")]
         public List<RunnerChange> Rc { get; set; }
 
         /// <summary>
@@ -78,6 +83,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>The total amount matched across the market. This value is truncated at 2dp (or null if un-changed)</value>
         [DataMember(Name = "tv", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("tv")]
         public double? Tv { get; set; }
 
         /// <summary>

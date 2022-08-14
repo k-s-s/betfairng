@@ -42,6 +42,7 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets FullImage
         /// </summary>
         [DataMember(Name = "fullImage", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("fullImage")]
         public bool? FullImage { get; set; }
 
         /// <summary>
@@ -49,6 +50,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Handicap - the handicap of the runner (selection) (null if not applicable)</value>
         [DataMember(Name = "hc", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("hc")]
         public double? Hc { get; set; }
 
         /// <summary>
@@ -56,6 +58,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Selection Id - the id of the runner (selection)</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
         public long? Id { get; set; }
 
         /// <summary>
@@ -63,6 +66,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Matched Backs - matched amounts by distinct matched price on the Back side for this runner (selection)</value>
         [DataMember(Name = "mb", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("mb")]
         public List<List<double?>> Mb { get; set; }
 
         /// <summary>
@@ -70,6 +74,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Matched Lays - matched amounts by distinct matched price on the Lay side for this runner (selection)</value>
         [DataMember(Name = "ml", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("ml")]
         public List<List<double?>> Ml { get; set; }
 
         /// <summary>
@@ -77,6 +82,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Unmatched Orders - orders on this runner (selection) that are not fully matched</value>
         [DataMember(Name = "uo", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("uo")]
         public List<Order> Uo { get; set; }
 
         /// <summary>

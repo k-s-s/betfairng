@@ -49,6 +49,7 @@ namespace Betfair.ESASwagger.Model
         }
 
         [JsonConverter(typeof(StringEnumConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum BettingTypesEnum
         {
             [EnumMember(Value = "ODDS")]
@@ -71,54 +72,63 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets BettingTypes
         /// </summary>
         [DataMember(Name = "bettingTypes", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("bettingTypes")]
         public List<BettingTypesEnum?> BettingTypes { get; set; }
 
         /// <summary>
         ///     Gets or Sets BspMarket
         /// </summary>
         [DataMember(Name = "bspMarket", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("bspMarket")]
         public bool? BspMarket { get; set; }
 
         /// <summary>
         ///     Gets or Sets CountryCodes
         /// </summary>
         [DataMember(Name = "countryCodes", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("countryCodes")]
         public List<string> CountryCodes { get; set; }
 
         /// <summary>
         ///     Gets or Sets EventIds
         /// </summary>
         [DataMember(Name = "eventIds", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("eventIds")]
         public List<string> EventIds { get; set; }
 
         /// <summary>
         ///     Gets or Sets EventTypeIds
         /// </summary>
         [DataMember(Name = "eventTypeIds", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("eventTypeIds")]
         public List<string> EventTypeIds { get; set; }
 
         /// <summary>
         ///     Gets or Sets MarketIds
         /// </summary>
         [DataMember(Name = "marketIds", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("marketIds")]
         public List<string> MarketIds { get; set; }
 
         /// <summary>
         ///     Gets or Sets MarketTypes
         /// </summary>
         [DataMember(Name = "marketTypes", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("marketTypes")]
         public List<string> MarketTypes { get; set; }
 
         /// <summary>
         ///     Gets or Sets TurnInPlayEnabled
         /// </summary>
         [DataMember(Name = "turnInPlayEnabled", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("turnInPlayEnabled")]
         public bool? TurnInPlayEnabled { get; set; }
 
         /// <summary>
         ///     Gets or Sets Venues
         /// </summary>
         [DataMember(Name = "venues", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("venues")]
         public List<string> Venues { get; set; }
 
         /// <summary>

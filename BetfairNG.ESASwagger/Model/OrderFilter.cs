@@ -26,6 +26,7 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets AccountIds
         /// </summary>
         [DataMember(Name = "accountIds", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("accountIds")]
         public List<long?> AccountIds { get; set; }
 
         /// <summary>

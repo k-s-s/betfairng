@@ -30,6 +30,7 @@ namespace Betfair.ESASwagger.Model
         ///     Gets or Sets AppKey
         /// </summary>
         [DataMember(Name = "appKey", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("appKey")]
         public string AppKey { get; set; }
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>Client generated unique id to link request with response (like json rpc)</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
         public new int? Id { get; set; }
 
         /// <summary>
@@ -44,12 +46,14 @@ namespace Betfair.ESASwagger.Model
         /// </summary>
         /// <value>The operation type</value>
         [DataMember(Name = "op", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("op")]
         public new string Op { get; set; }
 
         /// <summary>
         ///     Gets or Sets Session
         /// </summary>
         [DataMember(Name = "session", EmitDefaultValue = false)]
+        [System.Text.Json.Serialization.JsonPropertyName("session")]
         public string Session { get; set; }
 
         /// <summary>
