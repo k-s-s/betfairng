@@ -489,7 +489,7 @@ namespace BetfairNG
             using (Stream stream = ((HttpWebResponse)request.GetResponse()).GetResponseStream())
             using (StreamReader reader = new StreamReader(stream, Encoding.Default))
             {
-                var jsonResponse = JsonConvert.Deserialize<LoginResponse>(reader.ReadToEnd());
+                var jsonResponse = JsonConvertNg.Deserialize<LoginResponse>(reader.ReadToEnd());
                 if (jsonResponse.LoginStatus == "SUCCESS")
                 {
                     this.sessionToken = jsonResponse.SessionToken;

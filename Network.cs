@@ -78,14 +78,14 @@ namespace BetfairNG
                 url += "/scores/json-rpc/v1";
 
             var call = new JsonRequest { Method = method, Id = 1, Params = args };
-            var requestData = JsonConvert.Serialize(call);
+            var requestData = JsonConvertNg.Serialize(call);
 
             var response = Request(url, requestData, "application/json-rpc", this.AppKey, this.SessionToken);
 
             var result = response.ContinueWith(c =>
             {
                 var lastByte = DateTime.Now;
-                var jsonResponse = JsonConvert.Deserialize<JsonResponse<T>>(c.Result);
+                var jsonResponse = JsonConvertNg.Deserialize<JsonResponse<T>>(c.Result);
 
                 watch.Stop();
                 TraceSource.TraceInformation("Network finish: {0}ms, {1}, {2}",
@@ -119,7 +119,7 @@ namespace BetfairNG
             using Stream stream = ((HttpWebResponse)request.GetResponse()).GetResponseStream();
             using StreamReader reader = new StreamReader(stream, Encoding.Default);
             var lastByte = DateTime.Now;
-            var response = JsonConvert.Deserialize<KeepAliveResponse>(reader.ReadToEnd());
+            var response = JsonConvertNg.Deserialize<KeepAliveResponse>(reader.ReadToEnd());
             watch.Stop();
             TraceSource.TraceInformation("KeepAlive finish: {0}ms", watch.ElapsedMilliseconds);
             BetfairServerResponse<KeepAliveResponse> r = new BetfairServerResponse<KeepAliveResponse>

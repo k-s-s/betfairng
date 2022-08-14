@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using BetfairNG;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -103,7 +103,7 @@ namespace Betfair.ESAClient.Auth
                 using StreamReader reader = new(thePage.GetResponseStream());
                 string response = reader.ReadToEnd();
                 Trace.TraceInformation("{0}: Response: {1}", _host, response);
-                sessionDetails = JsonConvert.DeserializeObject<SessionDetails>(response);
+                sessionDetails = JsonConvertNg.Deserialize<SessionDetails>(response);
             }
             catch (Exception e)
             {
@@ -126,16 +126,20 @@ namespace Betfair.ESAClient.Auth
 
     internal class SessionDetails
     {
-        [JsonProperty(PropertyName = "error")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "error")]
+        [System.Text.Json.Serialization.JsonPropertyName("error")]
         public string Error { get; set; }
 
-        [JsonProperty(PropertyName = "product")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "product")]
+        [System.Text.Json.Serialization.JsonPropertyName("product")]
         public string Product { get; set; }
 
-        [JsonProperty(PropertyName = "status")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "status")]
+        [System.Text.Json.Serialization.JsonPropertyName("status")]
         public string Status { get; set; }
 
-        [JsonProperty(PropertyName = "token")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "token")]
+        [System.Text.Json.Serialization.JsonPropertyName("token")]
         public string Token { get; set; }
     }
 }

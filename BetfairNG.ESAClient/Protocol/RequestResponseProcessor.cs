@@ -1,9 +1,11 @@
 ﻿using Betfair.ESASwagger.Model;
-using Newtonsoft.Json;
+using BetfairNG;
 using System;
 using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
+using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -233,7 +235,7 @@ namespace Betfair.ESAClient.Protocol
             ResponseMessage message = null;
             LastResponseTime = DateTime.UtcNow;
             var time = Stopwatch.StartNew();
-            string operation = GetOperation(new JsonTextReader(new StringReader(line)));
+            string operation = GetOperation(new Utf8JsonReader(Encoding.UTF8.GetBytes(line)));
             switch (operation)
             {
                 case RESPONSE_CONNECTION:
@@ -286,7 +288,7 @@ namespace Betfair.ESAClient.Protocol
         /// </summary>
         /// <param name="jreader">A reader containing json</param>
         /// <returns>The "op" value</returns>
-        protected string GetOperation(JsonReader jreader)
+        protected string GetOperation(Utf8JsonReader jreader)
         {
             string operation = null;
             if (jreader.Read())
@@ -294,11 +296,12 @@ namespace Betfair.ESAClient.Protocol
                 //rip off start
                 while (jreader.Read())
                 {
-                    if (jreader.TokenType == JsonToken.PropertyName && OPERATION.Equals(jreader.Value))
+                    var jsonValue = jreader.GetString();
+                    if (jreader.TokenType == JsonTokenType.PropertyName && OPERATION.Equals(jsonValue))
                     {
                         if (jreader.Read()) //rip out op's value
                         {
-                            operation = (string)jreader.Value;
+                            operation = jsonValue;
                         }
                         break;
                     }
@@ -369,7 +372,7 @@ namespace Betfair.ESAClient.Protocol
 
         private T ReadResponseMessage<T>(string line) where T : ResponseMessage
         {
-            T response = JsonConvert.DeserializeObject<T>(line);
+            T response = JsonConvertNg.Deserialize<T>(line);
             return response;
         }
 
@@ -392,7 +395,7 @@ namespace Betfair.ESAClient.Protocol
                 _tasks[requestResponse.Id] = requestResponse;
 
                 //serialize message & send
-                string line = JsonConvert.SerializeObject(requestResponse.Request, Formatting.None);
+                string line = JsonConvertNg.Serialize(requestResponse.Request);
                 Trace.TraceInformation("Client->ESA: " + line);
 
                 //send line

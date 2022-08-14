@@ -3,29 +3,18 @@ using System.IO;
 
 namespace BetfairNG
 {
-    public class JsonConvert
+    public static class JsonConvertExtensions
     {
-        public static T Deserialize<T>(string json)
+        public static void Export(this JsonRequest request, TextWriter writer)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(json);
-        }
-
-        public static void Export(JsonRequest request, TextWriter writer)
-        {
-            var json = Serialize<JsonRequest>(request);
+            var json = JsonConvertNg.Serialize<JsonRequest>(request);
             writer.Write(json);
         }
 
         public static JsonResponse<T> Import<T>(TextReader reader)
         {
             var jsonResponse = reader.ReadToEnd();
-            return Deserialize<JsonResponse<T>>(jsonResponse);
-        }
-
-        public static string Serialize<T>(T value)
-        {
-            var settings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-            return Newtonsoft.Json.JsonConvert.SerializeObject(value, settings);
+            return JsonConvertNg.Deserialize<JsonResponse<T>>(jsonResponse);
         }
     }
 
