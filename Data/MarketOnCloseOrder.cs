@@ -1,11 +1,12 @@
-using Newtonsoft.Json;
+
 using System.Text;
 
 namespace BetfairNG.Data
 {
     public class MarketOnCloseOrder
     {
-        [JsonProperty(PropertyName = "liability")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "liability")]
+        [System.Text.Json.Serialization.JsonPropertyName("liability")]
         public double Liability { get; set; }
 
         public override string ToString()

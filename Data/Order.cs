@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+
 using System;
 using System.Text;
 
@@ -6,49 +6,64 @@ namespace BetfairNG.Data
 {
     public class Order
     {
-        [JsonProperty(PropertyName = "avgPriceMatched")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "avgPriceMatched")]
+        [System.Text.Json.Serialization.JsonPropertyName("avgPriceMatched")]
         public double? AvgPriceMatched { get; set; }
 
-        [JsonProperty(PropertyName = "betId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "betId")]
+        [System.Text.Json.Serialization.JsonPropertyName("betId")]
         public string BetId { get; set; }
 
-        [JsonProperty(PropertyName = "bspLiability")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "bspLiability")]
+        [System.Text.Json.Serialization.JsonPropertyName("bspLiability")]
         public double? BspLiability { get; set; }
 
-        [JsonProperty(PropertyName = "orderType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "orderType")]
+        [System.Text.Json.Serialization.JsonPropertyName("orderType")]
         public OrderType OrderType { get; set; }
 
-        [JsonProperty(PropertyName = "persistenceType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "persistenceType")]
+        [System.Text.Json.Serialization.JsonPropertyName("persistenceType")]
         public PersistenceType PersistenceType { get; set; }
 
-        [JsonProperty(PropertyName = "placedDate")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "placedDate")]
+        [System.Text.Json.Serialization.JsonPropertyName("placedDate")]
         public DateTime? PlacedDate { get; set; }
 
-        [JsonProperty(PropertyName = "price")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "price")]
+        [System.Text.Json.Serialization.JsonPropertyName("price")]
         public double Price { get; set; }
 
-        [JsonProperty(PropertyName = "side")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "side")]
+        [System.Text.Json.Serialization.JsonPropertyName("side")]
         public Side Side { get; set; }
 
-        [JsonProperty(PropertyName = "size")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "size")]
+        [System.Text.Json.Serialization.JsonPropertyName("size")]
         public double Size { get; set; }
 
-        [JsonProperty(PropertyName = "sizeCancelled")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "sizeCancelled")]
+        [System.Text.Json.Serialization.JsonPropertyName("sizeCancelled")]
         public double? SizeCancelled { get; set; }
 
-        [JsonProperty(PropertyName = "sizeLapsed")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "sizeLapsed")]
+        [System.Text.Json.Serialization.JsonPropertyName("sizeLapsed")]
         public double? SizeLapsed { get; set; }
 
-        [JsonProperty(PropertyName = "sizeMatched")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "sizeMatched")]
+        [System.Text.Json.Serialization.JsonPropertyName("sizeMatched")]
         public double? SizeMatched { get; set; }
 
-        [JsonProperty(PropertyName = "sizeRemaining")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "sizeRemaining")]
+        [System.Text.Json.Serialization.JsonPropertyName("sizeRemaining")]
         public double? SizeRemaining { get; set; }
 
-        [JsonProperty(PropertyName = "sizeVoided")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "sizeVoided")]
+        [System.Text.Json.Serialization.JsonPropertyName("sizeVoided")]
         public double? SizeVoided { get; set; }
 
-        [JsonProperty(PropertyName = "status")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "status")]
+        [System.Text.Json.Serialization.JsonPropertyName("status")]
         public OrderStatus Status { get; set; }
 
         public override string ToString()

@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+
 using System;
 using System.Text;
 
@@ -6,52 +6,68 @@ namespace BetfairNG.Data
 {
     public class MarketDescription
     {
-        [JsonProperty(PropertyName = "bettingType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "bettingType")]
+        [System.Text.Json.Serialization.JsonPropertyName("bettingType")]
         public MarketBettingType BettingType { get; set; }
 
-        [JsonProperty(PropertyName = "clarifications")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "clarifications")]
+        [System.Text.Json.Serialization.JsonPropertyName("clarifications")]
         public string Clarifications { get; set; }
 
-        [JsonProperty(PropertyName = "eachWayDivisor")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "eachWayDivisor")]
+        [System.Text.Json.Serialization.JsonPropertyName("eachWayDivisor")]
         public double EachWayDivisor { get; set; }
 
-        [JsonProperty(PropertyName = "bspMarket")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "bspMarket")]
+        [System.Text.Json.Serialization.JsonPropertyName("bspMarket")]
         public bool IsBspMarket { get; set; }
 
-        [JsonProperty(PropertyName = "discountAllowed")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "discountAllowed")]
+        [System.Text.Json.Serialization.JsonPropertyName("discountAllowed")]
         public bool IsDiscountAllowed { get; set; }
 
-        [JsonProperty(PropertyName = "persistenceEnabled")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "persistenceEnabled")]
+        [System.Text.Json.Serialization.JsonPropertyName("persistenceEnabled")]
         public bool IsPersistenceEnabled { get; set; }
 
-        [JsonProperty(PropertyName = "turnInPlayEnabled")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "turnInPlayEnabled")]
+        [System.Text.Json.Serialization.JsonPropertyName("turnInPlayEnabled")]
         public bool IsTurnInPlayEnabled { get; set; }
 
-        [JsonProperty(PropertyName = "marketBaseRate")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketBaseRate")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketBaseRate")]
         public double MarketBaseRate { get; set; }
 
-        [JsonProperty(PropertyName = "marketTime")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketTime")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketTime")]
         public DateTime MarketTime { get; set; }
 
-        [JsonProperty(PropertyName = "marketType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketType")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketType")]
         public string MarketType { get; set; }
 
-        [JsonProperty(PropertyName = "regulator")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "regulator")]
+        [System.Text.Json.Serialization.JsonPropertyName("regulator")]
         public string Regulator { get; set; }
 
-        [JsonProperty(PropertyName = "rules")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "rules")]
+        [System.Text.Json.Serialization.JsonPropertyName("rules")]
         public string Rules { get; set; }
 
-        [JsonProperty(PropertyName = "rulesHasDate")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "rulesHasDate")]
+        [System.Text.Json.Serialization.JsonPropertyName("rulesHasDate")]
         public bool RulesHasDate { get; set; }
 
-        [JsonProperty(PropertyName = "settleTime")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "settleTime")]
+        [System.Text.Json.Serialization.JsonPropertyName("settleTime")]
         public DateTime? SettleTime { get; set; }
 
-        [JsonProperty(PropertyName = "suspendTime")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "suspendTime")]
+        [System.Text.Json.Serialization.JsonPropertyName("suspendTime")]
         public DateTime? SuspendTime { get; set; }
 
-        [JsonProperty(PropertyName = "wallet")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "wallet")]
+        [System.Text.Json.Serialization.JsonPropertyName("wallet")]
         public string Wallet { get; set; }
 
         public override string ToString()

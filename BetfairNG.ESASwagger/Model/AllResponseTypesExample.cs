@@ -1,5 +1,5 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+
+
 using System;
 using System.Runtime.Serialization;
 using System.Text;
@@ -37,7 +37,7 @@ namespace Betfair.ESASwagger.Model
         /// <summary>
         ///     Gets or Sets OpTypes
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum OpTypesEnum
         {
@@ -155,7 +155,7 @@ namespace Betfair.ESASwagger.Model
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return this.ToJsonStj();
         }
 
         /// <summary>

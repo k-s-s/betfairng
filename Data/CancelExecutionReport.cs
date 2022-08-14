@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,19 +6,24 @@ namespace BetfairNG.Data
 {
     public class CancelExecutionReport
     {
-        [JsonProperty(PropertyName = "customerRef")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "customerRef")]
+        [System.Text.Json.Serialization.JsonPropertyName("customerRef")]
         public string CustomerRef { get; set; }
 
-        [JsonProperty(PropertyName = "errorCode")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "errorCode")]
+        [System.Text.Json.Serialization.JsonPropertyName("errorCode")]
         public ExecutionReportErrorCode ErrorCode { get; set; }
 
-        [JsonProperty(PropertyName = "instructionReports")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "instructionReports")]
+        [System.Text.Json.Serialization.JsonPropertyName("instructionReports")]
         public IList<CancelInstructionReport> InstructionReports { get; set; }
 
-        [JsonProperty(PropertyName = "marketId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketId")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketId")]
         public string MarketId { get; set; }
 
-        [JsonProperty(PropertyName = "status")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "status")]
+        [System.Text.Json.Serialization.JsonPropertyName("status")]
         public ExecutionReportStatus Status { get; set; }
 
         public override string ToString()

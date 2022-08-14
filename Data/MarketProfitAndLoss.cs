@@ -1,17 +1,20 @@
-﻿using Newtonsoft.Json;
+﻿
 using System.Collections.Generic;
 
 namespace BetfairNG.Data
 {
     public class MarketProfitAndLoss
     {
-        [JsonProperty(PropertyName = "commissionApplied")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "commissionApplied")]
+        [System.Text.Json.Serialization.JsonPropertyName("commissionApplied")]
         public double CommissionApplied { get; set; }
 
-        [JsonProperty(PropertyName = "marketId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketId")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketId")]
         public string MarketId { get; set; }
 
-        [JsonProperty(PropertyName = "profitAndLosses")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "profitAndLosses")]
+        [System.Text.Json.Serialization.JsonPropertyName("profitAndLosses")]
         public List<RunnerProfitAndLoss> ProfitAndLosses { get; set; }
     }
 }

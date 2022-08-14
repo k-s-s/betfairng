@@ -1,29 +1,36 @@
-using Newtonsoft.Json;
+
 using System.Text;
 
 namespace BetfairNG.Data
 {
     public class PlaceInstruction
     {
-        [JsonProperty(PropertyName = "handicap")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "handicap")]
+        [System.Text.Json.Serialization.JsonPropertyName("handicap")]
         public double? Handicap { get; set; }
 
-        [JsonProperty(PropertyName = "limitOnCloseOrder")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "limitOnCloseOrder")]
+        [System.Text.Json.Serialization.JsonPropertyName("limitOnCloseOrder")]
         public LimitOnCloseOrder LimitOnCloseOrder { get; set; }
 
-        [JsonProperty(PropertyName = "limitOrder")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "limitOrder")]
+        [System.Text.Json.Serialization.JsonPropertyName("limitOrder")]
         public LimitOrder LimitOrder { get; set; }
 
-        [JsonProperty(PropertyName = "marketOnCloseOrder")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketOnCloseOrder")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketOnCloseOrder")]
         public MarketOnCloseOrder MarketOnCloseOrder { get; set; }
 
-        [JsonProperty(PropertyName = "orderType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "orderType")]
+        [System.Text.Json.Serialization.JsonPropertyName("orderType")]
         public OrderType OrderType { get; set; }
 
-        [JsonProperty(PropertyName = "selectionId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "selectionId")]
+        [System.Text.Json.Serialization.JsonPropertyName("selectionId")]
         public long SelectionId { get; set; }
 
-        [JsonProperty(PropertyName = "side")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "side")]
+        [System.Text.Json.Serialization.JsonPropertyName("side")]
         public Side Side { get; set; }
 
         public override string ToString()

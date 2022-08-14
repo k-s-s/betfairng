@@ -1,14 +1,16 @@
-using Newtonsoft.Json;
+
 using System.Text;
 
 namespace BetfairNG.Data
 {
     public class EventResult
     {
-        [JsonProperty(PropertyName = "event")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "event")]
+        [System.Text.Json.Serialization.JsonPropertyName("event")]
         public Event Event { get; set; }
 
-        [JsonProperty(PropertyName = "marketCount")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketCount")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketCount")]
         public int MarketCount { get; set; }
 
         public override string ToString()

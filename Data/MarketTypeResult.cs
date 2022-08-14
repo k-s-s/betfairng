@@ -1,13 +1,15 @@
-﻿using Newtonsoft.Json;
+﻿
 
 namespace BetfairNG.Data
 {
     public class MarketTypeResult
     {
-        [JsonProperty(PropertyName = "marketCount")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketCount")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketCount")]
         public int MarketCount { get; set; }
 
-        [JsonProperty(PropertyName = "marketType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketType")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketType")]
         public string MarketType { get; set; }
     }
 }

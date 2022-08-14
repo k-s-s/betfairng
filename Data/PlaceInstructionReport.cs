@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+
 using System;
 using System.Text;
 
@@ -6,25 +6,32 @@ namespace BetfairNG.Data
 {
     public class PlaceInstructionReport
     {
-        [JsonProperty(PropertyName = "averagePriceMatched")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "averagePriceMatched")]
+        [System.Text.Json.Serialization.JsonPropertyName("averagePriceMatched")]
         public double? AveragePriceMatched { get; set; }
 
-        [JsonProperty(PropertyName = "betId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "betId")]
+        [System.Text.Json.Serialization.JsonPropertyName("betId")]
         public string BetId { get; set; }
 
-        [JsonProperty(PropertyName = "errorCode")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "errorCode")]
+        [System.Text.Json.Serialization.JsonPropertyName("errorCode")]
         public InstructionReportErrorCode ErrorCode { get; set; }
 
-        [JsonProperty(PropertyName = "instruction")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "instruction")]
+        [System.Text.Json.Serialization.JsonPropertyName("instruction")]
         public PlaceInstruction Instruction { get; set; }
 
-        [JsonProperty(PropertyName = "placedDate")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "placedDate")]
+        [System.Text.Json.Serialization.JsonPropertyName("placedDate")]
         public DateTime? PlacedDate { get; set; }
 
-        [JsonProperty(PropertyName = "sizeMatched")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "sizeMatched")]
+        [System.Text.Json.Serialization.JsonPropertyName("sizeMatched")]
         public double? SizeMatched { get; set; }
 
-        [JsonProperty(PropertyName = "status")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "status")]
+        [System.Text.Json.Serialization.JsonPropertyName("status")]
         public InstructionReportStatus Status { get; set; }
 
         public override string ToString()

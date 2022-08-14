@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,39 +7,50 @@ namespace BetfairNG.Data
 {
     public class Runner
     {
-        [JsonProperty(PropertyName = "adjustmentFactor")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "adjustmentFactor")]
+        [System.Text.Json.Serialization.JsonPropertyName("adjustmentFactor")]
         public double? AdjustmentFactor { get; set; }
 
-        [JsonProperty(PropertyName = "ex")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "ex")]
+        [System.Text.Json.Serialization.JsonPropertyName("ex")]
         public ExchangePrices ExchangePrices { get; set; }
 
-        [JsonProperty(PropertyName = "handicap")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "handicap")]
+        [System.Text.Json.Serialization.JsonPropertyName("handicap")]
         public double? Handicap { get; set; }
 
-        [JsonProperty(PropertyName = "lastPriceTraded")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "lastPriceTraded")]
+        [System.Text.Json.Serialization.JsonPropertyName("lastPriceTraded")]
         public double? LastPriceTraded { get; set; }
 
         public MarketBook MarketBook { get; set; }
 
-        [JsonProperty(PropertyName = "matches")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "matches")]
+        [System.Text.Json.Serialization.JsonPropertyName("matches")]
         public List<Match> Matches { get; set; }
 
-        [JsonProperty(PropertyName = "orders")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "orders")]
+        [System.Text.Json.Serialization.JsonPropertyName("orders")]
         public List<Order> Orders { get; set; }
 
-        [JsonProperty(PropertyName = "removalDate")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "removalDate")]
+        [System.Text.Json.Serialization.JsonPropertyName("removalDate")]
         public DateTime? RemovalDate { get; set; }
 
-        [JsonProperty(PropertyName = "selectionId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "selectionId")]
+        [System.Text.Json.Serialization.JsonPropertyName("selectionId")]
         public long SelectionId { get; set; }
 
-        [JsonProperty(PropertyName = "sp")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "sp")]
+        [System.Text.Json.Serialization.JsonPropertyName("sp")]
         public StartingPrices StartingPrices { get; set; }
 
-        [JsonProperty(PropertyName = "status")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "status")]
+        [System.Text.Json.Serialization.JsonPropertyName("status")]
         public RunnerStatus Status { get; set; }
 
-        [JsonProperty(PropertyName = "totalMatched")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "totalMatched")]
+        [System.Text.Json.Serialization.JsonPropertyName("totalMatched")]
         public double TotalMatched { get; set; }
 
         public override string ToString()

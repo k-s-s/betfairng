@@ -1,16 +1,19 @@
-﻿using Newtonsoft.Json;
+﻿
 
 namespace BetfairNG.Data
 {
     public class RunnerProfitAndLoss
     {
-        [JsonProperty(PropertyName = "ifLose")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "ifLose")]
+        [System.Text.Json.Serialization.JsonPropertyName("ifLose")]
         public double IfLose { get; set; }
 
-        [JsonProperty(PropertyName = "ifWin")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "ifWin")]
+        [System.Text.Json.Serialization.JsonPropertyName("ifWin")]
         public double IfWin { get; set; }
 
-        [JsonProperty(PropertyName = "selectionId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "selectionId")]
+        [System.Text.Json.Serialization.JsonPropertyName("selectionId")]
         public long SelectionId { get; set; }
     }
 }

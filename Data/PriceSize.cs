@@ -1,14 +1,16 @@
-using Newtonsoft.Json;
+
 using System.Text;
 
 namespace BetfairNG.Data
 {
     public class PriceSize
     {
-        [JsonProperty(PropertyName = "price")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "price")]
+        [System.Text.Json.Serialization.JsonPropertyName("price")]
         public double Price { get; set; }
 
-        [JsonProperty(PropertyName = "size")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "size")]
+        [System.Text.Json.Serialization.JsonPropertyName("size")]
         public double Size { get; set; }
 
         public override string ToString()

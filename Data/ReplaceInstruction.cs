@@ -1,13 +1,15 @@
-﻿using Newtonsoft.Json;
+﻿
 
 namespace BetfairNG.Data
 {
     public class ReplaceInstruction
     {
-        [JsonProperty(PropertyName = "betId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "betId")]
+        [System.Text.Json.Serialization.JsonPropertyName("betId")]
         public string BetId { get; set; }
 
-        [JsonProperty(PropertyName = "newPrice")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "newPrice")]
+        [System.Text.Json.Serialization.JsonPropertyName("newPrice")]
         public double NewPrice { get; set; }
     }
 }

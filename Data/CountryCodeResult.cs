@@ -1,13 +1,15 @@
-﻿using Newtonsoft.Json;
+﻿
 
 namespace BetfairNG.Data
 {
     public class CountryCodeResult
     {
-        [JsonProperty(PropertyName = "countryCode")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "countryCode")]
+        [System.Text.Json.Serialization.JsonPropertyName("countryCode")]
         public string CountryCode { get; set; }
 
-        [JsonProperty(PropertyName = "marketCount")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketCount")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketCount")]
         public int MarketCount { get; set; }
     }
 }

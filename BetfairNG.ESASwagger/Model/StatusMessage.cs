@@ -1,5 +1,5 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+
+
 using System;
 using System.Runtime.Serialization;
 using System.Text;
@@ -44,7 +44,7 @@ namespace Betfair.ESASwagger.Model
         ///     The type of error in case of a failure
         /// </summary>
         /// <value>The type of error in case of a failure</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum ErrorCodeEnum
         {
@@ -92,7 +92,7 @@ namespace Betfair.ESASwagger.Model
         ///     The status of the last request
         /// </summary>
         /// <value>The status of the last request</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumMemberConverter))]
         public enum StatusCodeEnum
         {
@@ -233,7 +233,7 @@ namespace Betfair.ESASwagger.Model
         /// <returns>JSON string presentation of the object</returns>
         public new string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return this.ToJsonStj();
         }
 
         /// <summary>

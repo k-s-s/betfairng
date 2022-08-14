@@ -1,5 +1,5 @@
 ﻿using BetfairNG.ESAClient.Serialisers;
-using Newtonsoft.Json;
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -25,17 +25,17 @@ namespace BetfairNG.ESAClient.Serialisers
     }
     public class NewtonSoftJsonSerialiser : IJsonSerialiser
     {
-        public JsonSerializerSettings Options { get; set; }
+        public Newtonsoft.Json.JsonSerializerSettings Options { get; set; }
         public NewtonSoftJsonSerialiser()
         {
-            Options = new JsonSerializerSettings
+            Options = new Newtonsoft.Json.JsonSerializerSettings
             {
-                NullValueHandling = NullValueHandling.Ignore,
+                NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore,
             };
         }
-        public T DeserialiseFromJson<T>(string json) => JsonConvert.DeserializeObject<T>(json);
+        public T DeserialiseFromJson<T>(string json) => Newtonsoft.Json.JsonConvert.DeserializeObject<T>(json);
 
-        public string SerialiseToJson<T>(T data) => JsonConvert.SerializeObject(data);
+        public string SerialiseToJson<T>(T data) => Newtonsoft.Json.JsonConvert.SerializeObject(data);
     }
     public class StjJsonSerialiser : IJsonSerialiser
     {

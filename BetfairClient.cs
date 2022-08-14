@@ -1,6 +1,5 @@
 ﻿using BetfairNG.Data;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,6 +7,7 @@ using System.IO;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 
 namespace BetfairNG
@@ -505,9 +505,9 @@ namespace BetfairNG
 
     public class BetfairServerException : System.Exception
     {
-        public JObject ServerData { get; set; }
+        public JsonObject ServerData { get; set; }
 
-        public JObject ServerDetail { get; set; }
+        public JsonObject ServerDetail { get; set; }
 
         public static BetfairServerException ToClientException(Data.Exceptions.Exception ex)
         {
@@ -540,25 +540,31 @@ namespace BetfairNG
 
     public class KeepAliveResponse
     {
-        [JsonProperty(PropertyName = "error")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "error")]
+        [System.Text.Json.Serialization.JsonPropertyName("error")]
         public string Error { get; set; }
 
-        [JsonProperty(PropertyName = "product")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "product")]
+        [System.Text.Json.Serialization.JsonPropertyName("product")]
         public string Product { get; set; }
 
-        [JsonProperty(PropertyName = "token")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "token")]
+        [System.Text.Json.Serialization.JsonPropertyName("token")]
         public string SessionToken { get; set; }
 
-        [JsonProperty(PropertyName = "status")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "status")]
+        [System.Text.Json.Serialization.JsonPropertyName("status")]
         public string Status { get; set; }
     }
 
     public class LoginResponse
     {
-        [JsonProperty(PropertyName = "loginStatus")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "loginStatus")]
+        [System.Text.Json.Serialization.JsonPropertyName("loginStatus")]
         public string LoginStatus { get; set; }
 
-        [JsonProperty(PropertyName = "sessionToken")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "sessionToken")]
+        [System.Text.Json.Serialization.JsonPropertyName("sessionToken")]
         public string SessionToken { get; set; }
     }
 }

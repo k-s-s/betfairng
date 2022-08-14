@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+
 using System;
 using System.Text;
 
@@ -6,22 +6,28 @@ namespace BetfairNG.Data
 {
     public class Event
     {
-        [JsonProperty(PropertyName = "countryCode")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "countryCode")]
+        [System.Text.Json.Serialization.JsonPropertyName("countryCode")]
         public string CountryCode { get; set; }
 
-        [JsonProperty(PropertyName = "id")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "id")]
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
         public string Id { get; set; }
 
-        [JsonProperty(PropertyName = "name")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "name")]
+        [System.Text.Json.Serialization.JsonPropertyName("name")]
         public string Name { get; set; }
 
-        [JsonProperty(PropertyName = "openDate")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "openDate")]
+        [System.Text.Json.Serialization.JsonPropertyName("openDate")]
         public DateTime? OpenDate { get; set; }
 
-        [JsonProperty(PropertyName = "timezone")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "timezone")]
+        [System.Text.Json.Serialization.JsonPropertyName("timezone")]
         public string Timezone { get; set; }
 
-        [JsonProperty(PropertyName = "venue")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "venue")]
+        [System.Text.Json.Serialization.JsonPropertyName("venue")]
         public string Venue { get; set; }
 
         public override string ToString()

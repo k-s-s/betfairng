@@ -1,13 +1,15 @@
-﻿using Newtonsoft.Json;
+﻿
 
 namespace BetfairNG.Data
 {
     public class UpdateInstruction
     {
-        [JsonProperty(PropertyName = "betId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "betId")]
+        [System.Text.Json.Serialization.JsonPropertyName("betId")]
         public string BetId { get; set; }
 
-        [JsonProperty(PropertyName = "newPersistenceType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "newPersistenceType")]
+        [System.Text.Json.Serialization.JsonPropertyName("newPersistenceType")]
         public PersistenceType NewPersistenceType { get; set; }
     }
 }

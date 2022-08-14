@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,19 +6,24 @@ namespace BetfairNG.Data
 {
     public class RunnerCatalog
     {
-        [JsonProperty(PropertyName = "handicap")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "handicap")]
+        [System.Text.Json.Serialization.JsonPropertyName("handicap")]
         public double Handicap { get; set; }
 
-        [JsonProperty(PropertyName = "metadata")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "metadata")]
+        [System.Text.Json.Serialization.JsonPropertyName("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
 
-        [JsonProperty(PropertyName = "runnerName")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "runnerName")]
+        [System.Text.Json.Serialization.JsonPropertyName("runnerName")]
         public string RunnerName { get; set; }
 
-        [JsonProperty(PropertyName = "selectionId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "selectionId")]
+        [System.Text.Json.Serialization.JsonPropertyName("selectionId")]
         public long SelectionId { get; set; }
 
-        [JsonProperty(PropertyName = "sortPriority")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "sortPriority")]
+        [System.Text.Json.Serialization.JsonPropertyName("sortPriority")]
         public int SortPriority { get; set; }
 
         public override string ToString()

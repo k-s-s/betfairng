@@ -1,13 +1,15 @@
-﻿using Newtonsoft.Json;
+﻿
 
 namespace BetfairNG.Data
 {
     public class VenueResult
     {
-        [JsonProperty(PropertyName = "marketCount")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketCount")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketCount")]
         public int MarketCount { get; set; }
 
-        [JsonProperty(PropertyName = "venue")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "venue")]
+        [System.Text.Json.Serialization.JsonPropertyName("venue")]
         public string Venue { get; set; }
     }
 }

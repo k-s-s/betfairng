@@ -1,29 +1,36 @@
-using Newtonsoft.Json;
+
 using System.Text;
 
 namespace BetfairNG.Data
 {
     public class LimitOrder
     {
-        [JsonProperty(PropertyName = "betTargetSize")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "betTargetSize")]
+        [System.Text.Json.Serialization.JsonPropertyName("betTargetSize")]
         public double? BetTargetSize { get; set; }
 
-        [JsonProperty(PropertyName = "betTargetType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "betTargetType")]
+        [System.Text.Json.Serialization.JsonPropertyName("betTargetType")]
         public BetTargetType? BetTargetType { get; set; }
 
-        [JsonProperty(PropertyName = "minFillSize")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "minFillSize")]
+        [System.Text.Json.Serialization.JsonPropertyName("minFillSize")]
         public double? MinFillSize { get; set; }
 
-        [JsonProperty(PropertyName = "persistenceType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "persistenceType")]
+        [System.Text.Json.Serialization.JsonPropertyName("persistenceType")]
         public PersistenceType PersistenceType { get; set; }
 
-        [JsonProperty(PropertyName = "price")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "price")]
+        [System.Text.Json.Serialization.JsonPropertyName("price")]
         public double Price { get; set; }
 
-        [JsonProperty(PropertyName = "size")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "size")]
+        [System.Text.Json.Serialization.JsonPropertyName("size")]
         public double Size { get; set; }
 
-        [JsonProperty(PropertyName = "timeInForce")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "timeInForce")]
+        [System.Text.Json.Serialization.JsonPropertyName("timeInForce")]
         public TimeInForce? TimeInForce { get; set; }
 
         public override string ToString()

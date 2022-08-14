@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿
 using System.IO;
 
 namespace BetfairNG
@@ -18,7 +18,6 @@ namespace BetfairNG
         }
     }
 
-    [JsonObject(MemberSerialization.OptIn)]
     public class JsonRequest
     {
         public JsonRequest()
@@ -26,38 +25,45 @@ namespace BetfairNG
             JsonRpc = "2.0";
         }
 
-        [JsonProperty(PropertyName = "id")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "id")]
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
         public object Id { get; set; }
 
-        [JsonProperty(PropertyName = "jsonrpc", NullValueHandling = NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "jsonrpc", NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.Text.Json.Serialization.JsonPropertyName("jsonrpc")]
         public string JsonRpc { get; set; }
 
-        [JsonProperty(PropertyName = "method")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "method")]
+        [System.Text.Json.Serialization.JsonPropertyName("method")]
         public string Method { get; set; }
 
-        [JsonProperty(PropertyName = "params")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "params")]
+        [System.Text.Json.Serialization.JsonPropertyName("params")]
         public object Params { get; set; }
     }
 
-    [JsonObject(MemberSerialization.OptIn)]
     public class JsonResponse<T>
     {
-        [JsonProperty(PropertyName = "error", NullValueHandling = NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "error", NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public Data.Exceptions.Exception Error { get; set; }
 
-        [JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
         public bool HasError
         {
             get { return Error != null; }
         }
 
-        [JsonProperty(PropertyName = "id")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "id")]
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
         public object Id { get; set; }
 
-        [JsonProperty(PropertyName = "jsonrpc", NullValueHandling = NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "jsonrpc", NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.Text.Json.Serialization.JsonPropertyName("jsonrpc")]
         public string JsonRpc { get; set; }
 
-        [JsonProperty(PropertyName = "result", NullValueHandling = NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "result", NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.Text.Json.Serialization.JsonPropertyName("result")]
         public T Result { get; set; }
     }
 }

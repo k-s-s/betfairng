@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,34 +7,44 @@ namespace BetfairNG.Data
 {
     public class MarketCatalogue
     {
-        [JsonProperty(PropertyName = "competition")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "competition")]
+        [System.Text.Json.Serialization.JsonPropertyName("competition")]
         public Competition Competition { get; set; }
 
-        [JsonProperty(PropertyName = "description")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "description")]
+        [System.Text.Json.Serialization.JsonPropertyName("description")]
         public MarketDescription Description { get; set; }
 
-        [JsonProperty(PropertyName = "event")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "event")]
+        [System.Text.Json.Serialization.JsonPropertyName("event")]
         public Event Event { get; set; }
 
-        [JsonProperty(PropertyName = "eventType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "eventType")]
+        [System.Text.Json.Serialization.JsonPropertyName("eventType")]
         public EventType EventType { get; set; }
 
-        [JsonProperty(PropertyName = "isMarketDataDelayed")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "isMarketDataDelayed")]
+        [System.Text.Json.Serialization.JsonPropertyName("isMarketDataDelayed")]
         public bool IsMarketDataDelayed { get; set; }
 
-        [JsonProperty(PropertyName = "marketId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketId")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketId")]
         public string MarketId { get; set; }
 
-        [JsonProperty(PropertyName = "marketName")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketName")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketName")]
         public string MarketName { get; set; }
 
-        [JsonProperty(PropertyName = "marketStartTime")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketStartTime")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketStartTime")]
         public DateTime MarketStartTime { get; set; }
 
-        [JsonProperty(PropertyName = "runners")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "runners")]
+        [System.Text.Json.Serialization.JsonPropertyName("runners")]
         public List<RunnerCatalog> Runners { get; set; }
 
-        [JsonProperty(PropertyName = "totalMatched")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "totalMatched")]
+        [System.Text.Json.Serialization.JsonPropertyName("totalMatched")]
         public double TotalMatched { get; set; }
 
         public override string ToString()

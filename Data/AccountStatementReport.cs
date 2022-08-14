@@ -1,14 +1,16 @@
-﻿using Newtonsoft.Json;
+﻿
 using System.Collections.Generic;
 
 namespace BetfairNG.Data
 {
     public class AccountStatementReport
     {
-        [JsonProperty(PropertyName = "accountStatement")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "accountStatement")]
+        [System.Text.Json.Serialization.JsonPropertyName("accountStatement")]
         public IList<StatementItem> AccountStatement { get; set; }
 
-        [JsonProperty(PropertyName = "moreAvailable")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "moreAvailable")]
+        [System.Text.Json.Serialization.JsonPropertyName("moreAvailable")]
         public bool MoreAvailable { get; set; }
     }
 }

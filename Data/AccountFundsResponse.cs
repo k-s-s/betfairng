@@ -1,25 +1,31 @@
-﻿using Newtonsoft.Json;
+﻿
 
 namespace BetfairNG.Data
 {
     public class AccountFundsResponse
     {
-        [JsonProperty(PropertyName = "availableToBetBalance")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "availableToBetBalance")]
+        [System.Text.Json.Serialization.JsonPropertyName("availableToBetBalance")]
         public double AvailableToBetBalance { get; set; }
 
-        [JsonProperty(PropertyName = "discountRate")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "discountRate")]
+        [System.Text.Json.Serialization.JsonPropertyName("discountRate")]
         public double DiscountRate { get; set; }
 
-        [JsonProperty(PropertyName = "exposure")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "exposure")]
+        [System.Text.Json.Serialization.JsonPropertyName("exposure")]
         public double Exposure { get; set; }
 
-        [JsonProperty(PropertyName = "exposureLimit")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "exposureLimit")]
+        [System.Text.Json.Serialization.JsonPropertyName("exposureLimit")]
         public double ExposureLimit { get; set; }
 
-        [JsonProperty(PropertyName = "pointsBalance")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "pointsBalance")]
+        [System.Text.Json.Serialization.JsonPropertyName("pointsBalance")]
         public double PointsBalance { get; set; }
 
-        [JsonProperty(PropertyName = "retainedCommission")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "retainedCommission")]
+        [System.Text.Json.Serialization.JsonPropertyName("retainedCommission")]
         public double RetainedCommission { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+
 using System;
 using System.Runtime.Serialization;
 using System.Text;
@@ -183,7 +183,7 @@ namespace Betfair.ESASwagger.Model
         /// <returns>JSON string presentation of the object</returns>
         public new string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return this.ToJsonStj();
         }
 
         /// <summary>

@@ -1,10 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿
 
 namespace BetfairNG.Data
 {
     public class MarketVersion
     {
-        [JsonProperty(PropertyName = "version")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "version")]
+        [System.Text.Json.Serialization.JsonPropertyName("version")]
         public long Version { get; set; }
     }
 }

@@ -1,22 +1,27 @@
-using Newtonsoft.Json;
+
 
 namespace BetfairNG.Data
 {
     public class ExBestOffersOverrides
     {
-        [JsonProperty(PropertyName = "bestPricesDepth")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "bestPricesDepth")]
+        [System.Text.Json.Serialization.JsonPropertyName("bestPricesDepth")]
         public int BestPricesDepth { get; set; }
 
-        [JsonProperty(PropertyName = "rollupLiabilityFactor")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "rollupLiabilityFactor")]
+        [System.Text.Json.Serialization.JsonPropertyName("rollupLiabilityFactor")]
         public int RollUpLiabilityFactor { get; set; }
 
-        [JsonProperty(PropertyName = "rollupLiabilityThreshold")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "rollupLiabilityThreshold")]
+        [System.Text.Json.Serialization.JsonPropertyName("rollupLiabilityThreshold")]
         public double RollUpLiabilityThreshold { get; set; }
 
-        [JsonProperty(PropertyName = "rollupLimit")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "rollupLimit")]
+        [System.Text.Json.Serialization.JsonPropertyName("rollupLimit")]
         public int RollUpLimit { get; set; }
 
-        [JsonProperty(PropertyName = "rollupModel")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "rollupModel")]
+        [System.Text.Json.Serialization.JsonPropertyName("rollupModel")]
         public RollUpModel RollUpModel { get; set; }
     }
 }

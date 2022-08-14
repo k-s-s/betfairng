@@ -1,62 +1,80 @@
-﻿using Newtonsoft.Json;
+﻿
 using System;
 
 namespace BetfairNG.Data
 {
     public class StatementLegacyData
     {
-        [JsonProperty(PropertyName = "avgPrice")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "avgPrice")]
+        [System.Text.Json.Serialization.JsonPropertyName("avgPrice")]
         public double AveragePrice { get; set; }
 
-        [JsonProperty(PropertyName = "betCategoryType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "betCategoryType")]
+        [System.Text.Json.Serialization.JsonPropertyName("betCategoryType")]
         public string BetCategoryType { get; set; }
 
-        [JsonProperty(PropertyName = "betSize")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "betSize")]
+        [System.Text.Json.Serialization.JsonPropertyName("betSize")]
         public double BetSize { get; set; }
 
-        [JsonProperty(PropertyName = "betType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "betType")]
+        [System.Text.Json.Serialization.JsonPropertyName("betType")]
         public string BetType { get; set; }
 
-        [JsonProperty(PropertyName = "commissionRate")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "commissionRate")]
+        [System.Text.Json.Serialization.JsonPropertyName("commissionRate")]
         public string CommissionRate { get; set; }
 
-        [JsonProperty(PropertyName = "eventId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "eventId")]
+        [System.Text.Json.Serialization.JsonPropertyName("eventId")]
         public long EventId { get; set; }
 
-        [JsonProperty(PropertyName = "eventTypeId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "eventTypeId")]
+        [System.Text.Json.Serialization.JsonPropertyName("eventTypeId")]
         public long EventTypeId { get; set; }
 
-        [JsonProperty(PropertyName = "fullMarketName")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "fullMarketName")]
+        [System.Text.Json.Serialization.JsonPropertyName("fullMarketName")]
         public string FullMarketName { get; set; }
 
-        [JsonProperty(PropertyName = "grossBetAmount")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "grossBetAmount")]
+        [System.Text.Json.Serialization.JsonPropertyName("grossBetAmount")]
         public double GrossBetAmount { get; set; }
 
-        [JsonProperty(PropertyName = "marketName")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketName")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketName")]
         public string MarketName { get; set; }
 
-        [JsonProperty(PropertyName = "marketType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketType")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketType")]
         public string MarketType { get; set; }
 
-        [JsonProperty(PropertyName = "placedDate")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "placedDate")]
+        [System.Text.Json.Serialization.JsonPropertyName("placedDate")]
         public DateTime PlacedDate { get; set; }
 
-        [JsonProperty(PropertyName = "selectionId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "selectionId")]
+        [System.Text.Json.Serialization.JsonPropertyName("selectionId")]
         public long SelectionId { get; set; }
 
-        [JsonProperty(PropertyName = "selectionName")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "selectionName")]
+        [System.Text.Json.Serialization.JsonPropertyName("selectionName")]
         public string SelectionName { get; set; }
 
-        [JsonProperty(PropertyName = "startDate")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "startDate")]
+        [System.Text.Json.Serialization.JsonPropertyName("startDate")]
         public DateTime StartDate { get; set; }
 
-        [JsonProperty(PropertyName = "transactionId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "transactionId")]
+        [System.Text.Json.Serialization.JsonPropertyName("transactionId")]
         public long TransactionId { get; set; }
 
-        [JsonProperty(PropertyName = "transactionType")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "transactionType")]
+        [System.Text.Json.Serialization.JsonPropertyName("transactionType")]
         public string TransactionType { get; set; }
 
-        [JsonProperty(PropertyName = "winLose")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "winLose")]
+        [System.Text.Json.Serialization.JsonPropertyName("winLose")]
         public string WinLose { get; set; }
     }
 }

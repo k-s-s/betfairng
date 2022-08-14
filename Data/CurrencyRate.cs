@@ -1,13 +1,15 @@
-﻿using Newtonsoft.Json;
+﻿
 
 namespace BetfairNG.Data
 {
     public class CurrencyRate
     {
-        [JsonProperty(PropertyName = "currencyCode")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "currencyCode")]
+        [System.Text.Json.Serialization.JsonPropertyName("currencyCode")]
         public string CurrencyCode { get; set; }
 
-        [JsonProperty(PropertyName = "rate")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "rate")]
+        [System.Text.Json.Serialization.JsonPropertyName("rate")]
         public double Rate { get; set; }
     }
 }

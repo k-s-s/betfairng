@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿
 using System;
 using System.Collections.Generic;
 
@@ -6,25 +6,32 @@ namespace BetfairNG.Data
 {
     public class StatementItem
     {
-        [JsonProperty(PropertyName = "amount")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "amount")]
+        [System.Text.Json.Serialization.JsonPropertyName("amount")]
         public double Amount { get; set; }
 
-        [JsonProperty(PropertyName = "balance")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "balance")]
+        [System.Text.Json.Serialization.JsonPropertyName("balance")]
         public double Balance { get; set; }
 
-        [JsonProperty(PropertyName = "itemClass")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "itemClass")]
+        [System.Text.Json.Serialization.JsonPropertyName("itemClass")]
         public ItemClass ItemClass { get; set; }
 
-        [JsonProperty(PropertyName = "itemClassData")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "itemClassData")]
+        [System.Text.Json.Serialization.JsonPropertyName("itemClassData")]
         public IDictionary<string, string> ItemClassData { get; set; }
 
-        [JsonProperty(PropertyName = "itemDate")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "itemDate")]
+        [System.Text.Json.Serialization.JsonPropertyName("itemDate")]
         public DateTime ItemDate { get; set; }
 
-        [JsonProperty(PropertyName = "legacyData")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "legacyData")]
+        [System.Text.Json.Serialization.JsonPropertyName("legacyData")]
         public StatementLegacyData LegacyData { get; set; }
 
-        [JsonProperty(PropertyName = "refId")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "refId")]
+        [System.Text.Json.Serialization.JsonPropertyName("refId")]
         public string RefId { get; set; }
     }
 }

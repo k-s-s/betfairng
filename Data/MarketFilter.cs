@@ -1,53 +1,68 @@
-using Newtonsoft.Json;
+
 using System.Collections.Generic;
 
 namespace BetfairNG.Data
 {
     public class MarketFilter
     {
-        [JsonProperty(PropertyName = "bspOnly")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "bspOnly")]
+        [System.Text.Json.Serialization.JsonPropertyName("bspOnly")]
         public bool? BspOnly { get; set; }
 
-        [JsonProperty(PropertyName = "competitionIds")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "competitionIds")]
+        [System.Text.Json.Serialization.JsonPropertyName("competitionIds")]
         public ISet<string> CompetitionIds { get; set; }
 
-        [JsonProperty(PropertyName = "eventIds")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "eventIds")]
+        [System.Text.Json.Serialization.JsonPropertyName("eventIds")]
         public ISet<string> EventIds { get; set; }
 
-        [JsonProperty(PropertyName = "eventTypeIds")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "eventTypeIds")]
+        [System.Text.Json.Serialization.JsonPropertyName("eventTypeIds")]
         public ISet<string> EventTypeIds { get; set; }
 
-        [JsonProperty(PropertyName = "exchangeIds")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "exchangeIds")]
+        [System.Text.Json.Serialization.JsonPropertyName("exchangeIds")]
         public ISet<string> ExchangeIds { get; set; }
 
-        [JsonProperty(PropertyName = "inPlayOnly")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "inPlayOnly")]
+        [System.Text.Json.Serialization.JsonPropertyName("inPlayOnly")]
         public bool? InPlayOnly { get; set; }
 
-        [JsonProperty(PropertyName = "marketBettingTypes")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketBettingTypes")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketBettingTypes")]
         public ISet<MarketBettingType> MarketBettingTypes { get; set; }
 
-        [JsonProperty(PropertyName = "marketCountries")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketCountries")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketCountries")]
         public ISet<string> MarketCountries { get; set; }
 
-        [JsonProperty(PropertyName = "marketIds")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketIds")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketIds")]
         public ISet<string> MarketIds { get; set; }
 
-        [JsonProperty(PropertyName = "marketStartTime")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketStartTime")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketStartTime")]
         public TimeRange MarketStartTime { get; set; }
 
-        [JsonProperty(PropertyName = "marketTypeCodes")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "marketTypeCodes")]
+        [System.Text.Json.Serialization.JsonPropertyName("marketTypeCodes")]
         public ISet<string> MarketTypeCodes { get; set; }
 
-        [JsonProperty(PropertyName = "textQuery")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "textQuery")]
+        [System.Text.Json.Serialization.JsonPropertyName("textQuery")]
         public string TextQuery { get; set; }
 
-        [JsonProperty(PropertyName = "turnInPlayEnabled")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "turnInPlayEnabled")]
+        [System.Text.Json.Serialization.JsonPropertyName("turnInPlayEnabled")]
         public bool? TurnInPlayEnabled { get; set; }
 
-        [JsonProperty(PropertyName = "venues")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "venues")]
+        [System.Text.Json.Serialization.JsonPropertyName("venues")]
         public ISet<string> Venues { get; set; }
 
-        [JsonProperty(PropertyName = "withOrders")]
+        [Newtonsoft.Json.JsonProperty(PropertyName = "withOrders")]
+        [System.Text.Json.Serialization.JsonPropertyName("withOrders")]
         public ISet<OrderStatus> WithOrders { get; set; }
     }
 }
